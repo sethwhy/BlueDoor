@@ -23,7 +23,7 @@
 ## Starting up the Challenge
 
 - Ensure VM host machine and target ip can ping eachother, that is all!
-  ![ping-scan](image-2.png)
+![image](https://github.com/user-attachments/assets/85b901ea-77c0-488a-b44f-72163e08c65c)
 
 - Restart is needed only and only if you tampered to much in Windows 7 machine
   This will require deletion of all Win x64 files and redownload and configuration
