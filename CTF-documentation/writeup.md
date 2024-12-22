@@ -2,7 +2,7 @@
 
 ## Challenge Information
 
-Link: [<link>](https://github.com/sethwhy/BlueDoor)
+Link: https://github.com/sethwhy/BlueDoor/tree/main
 
 Difficulty: 3/5
 
